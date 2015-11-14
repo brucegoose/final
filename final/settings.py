@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
-
 ON_HEROKU = os.getenv('ON_HEROKU', False)
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -36,6 +35,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = (
+    'registration',
+    'django.contrib.sites',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -44,8 +45,6 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'core',
     'bootstrap3',
-    'registration',
-    'django.contrib.sites',
 )
 
 MIDDLEWARE_CLASSES = (
